@@ -1,0 +1,60 @@
+{
+  "upcoming": [
+    {
+      "id": "evt-001",
+      "title": "Winter Linkup — Sandton",
+      "date": "2026-06-21",
+      "location": "Sandton, Johannesburg",
+      "image": "images/events/winter-linkup.jpg",
+      "summary": "End-of-month rooftop linkup. Cars, coffee, conversation.",
+      "ctaLabel": "RSVP",
+      "ctaLink": "contact.html"
+    },
+    {
+      "id": "evt-002",
+      "title": "Garden Route Convoy",
+      "date": "2026-07-12",
+      "location": "Cape Town → Knysna",
+      "image": "images/events/garden-route.jpg",
+      "summary": "Three-day coastal convoy. Limited to 40 cars.",
+      "ctaLabel": "Apply",
+      "ctaLink": "contact.html"
+    },
+    {
+      "id": "evt-003",
+      "title": "Show & Shine — Durban",
+      "date": "2026-08-30",
+      "location": "Durban Beachfront",
+      "image": "images/events/show-shine.jpg",
+      "summary": "Open-air showcase. Prizes for build, detail and stance.",
+      "ctaLabel": "Register",
+      "ctaLink": "contact.html"
+    }
+  ],
+  "past": [
+    {
+      "id": "evt-p01",
+      "title": "Track Day — Kyalami",
+      "date": "2026-03-08",
+      "location": "Kyalami GP Circuit",
+      "image": "images/events/kyalami.jpg",
+      "summary": "Open pit lane. Full grid of VWs."
+    },
+    {
+      "id": "evt-p02",
+      "title": "Heritage Run",
+      "date": "2026-02-15",
+      "location": "Pretoria",
+      "image": "images/events/heritage.jpg",
+      "summary": "Air-cooled to MK8 — every generation rolled out."
+    },
+    {
+      "id": "evt-p03",
+      "title": "Summer Sunset Meet",
+      "date": "2025-12-14",
+      "location": "Camps Bay",
+      "image": "images/events/summer.jpg",
+      "summary": "Sundowner cruise along the Atlantic Seaboard."
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — VW Lifestyle Club</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/svg+xml" href="../logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="login-shell" id="login">
+    <div class="login-card">
+      <a class="brand" href="../index.html" style="margin-bottom: 1.4rem;">
+        <img src="../logo.svg" alt="VW Lifestyle Club" style="height: 36px;">
+        <span class="brand-text">VW<span>·</span>Lifestyle Admin</span>
+      </a>
+      <h1>Sign in</h1>
+      <p style="font-size: .85rem; color: var(--mute-2); margin-bottom: 1.4rem;">Phase 1 uses a simple password gate. Default: <code style="color:var(--blue)">vwclub</code></p>
+      <form id="login-form">
+        <div class="field full">
+          <label for="pw">Password</label>
+          <input id="pw" type="password" autofocus>
+        </div>
+        <div style="margin-top: 1.2rem;">
+          <button class="btn primary" type="submit">Enter</button>
+        </div>
+        <div id="login-error" style="margin-top: 1rem; color: #ff7373; font-size: .85rem;"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SHELL -->
+  <div class="admin-shell hidden" id="shell">
+    <aside class="admin-side">
+      <h2>Admin</h2>
+      <nav id="admin-tabs">
+        <button data-tab="home" class="active">Home</button>
+        <button data-tab="gallery">Gallery</button>
+        <button data-tab="events">Events</button>
+        <button data-tab="sponsors">Sponsors</button>
+        <button data-tab="social">Social</button>
+        <button data-tab="newsletter">Newsletter</button>
+      </nav>
+      <div style="margin-top: 2rem;">
+        <a class="btn ghost" href="../index.html" style="width: 100%; justify-content: center;">← View Site</a>
+        <button class="btn ghost" id="logout" style="width: 100%; justify-content: center; margin-top: .5rem;">Sign Out</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <!-- HOME TAB -->
+      <section data-panel="home">
+        <h1>Homepage Content</h1>
+        <p class="hint">Edits are saved locally and applied immediately to the public site. Use <strong>Export JSON</strong> to download a file for deployment.</p>
+        <div class="admin-card">
+          <div class="admin-row">
+            <div class="field"><label>Hero title</label><input data-bind="home.hero.title"></div>
+            <div class="field"><label>Hero title accent</label><input data-bind="home.hero.titleAccent"></div>
+            <div class="field full" style="grid-column: 1 / -1;"><label>Hero subtitle</label><textarea data-bind="home.hero.subtitle"></textarea></div>
+            <div class="field"><label>CTA label</label><input data-bind="home.hero.ctaLabel"></div>
+            <div class="field"><label>CTA link</label><input data-bind="home.hero.ctaLink"></div>
+            <div class="field"><label>Hero video path</label><input data-bind="home.hero.videoSrc"></div>
+            <div class="field"><label>Hero poster path</label><input data-bind="home.hero.posterSrc"></div>
+          </div>
+          <div class="admin-actions">
+            <button class="btn primary" data-save="home">Save</button>
+            <button class="btn ghost" data-export="home">Export JSON</button>
+            <button class="btn ghost" data-reset="home">Reset</button>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3 style="margin-bottom: 1rem;">Featured Story</h3>
+          <div class="admin-row">
+            <div class="field"><label>Kicker</label><input data-bind="home.featuredStory.kicker"></div>
+            <div class="field"><label>Title</label><input data-bind="home.featuredStory.title"></div>
+            <div class="field full" style="grid-column: 1 / -1;"><label>Body</label><textarea data-bind="home.featuredStory.body"></textarea></div>
+            <div class="field"><label>Image path</label><input data-bind="home.featuredStory.image"></div>
+            <div class="field"><label>Link</label><input data-bind="home.featuredStory.link"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY TAB -->
+      <section data-panel="gallery" class="hidden">
+        <h1>Gallery</h1>
+        <p class="hint">Add photos or videos. Files must already exist in <code>/images</code> or <code>/videos</code> (upload them to your S3 bucket).</p>
+        <div class="admin-card">
+          <h3 style="margin-bottom: 1rem;">Add new item</h3>
+          <div class="admin-row">
+            <div class="field"><label>Type</label>
+              <select id="g-type"><option value="image">Image</option><option value="video">Video</option></select>
+            </div>
+            <div class="field"><label>Category</label>
+              <select id="g-category">
+                <option>Events</option><option>Builds</option><option>Lifestyle</option>
+                <option>Road Trips</option><option>Community</option>
+              </select>
+            </div>
+            <div class="field"><label>Title</label><input id="g-title"></div>
+            <div class="field"><label>Caption</label><input id="g-caption"></div>
+            <div class="field full" style="grid-column: 1 / -1;"><label>Media path (e.g. images/gallery/x.jpg)</label><input id="g-src"></div>
+            <div class="field full" style="grid-column: 1 / -1;" id="g-poster-wrap"><label>Poster path (video only)</label><input id="g-poster"></div>
+          </div>
+          <div class="admin-actions">
+            <button class="btn primary" id="g-add">Add Item</button>
+            <button class="btn ghost" data-export="gallery">Export JSON</button>
+            <button class="btn ghost" data-reset="gallery">Reset</button>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3 style="margin-bottom: .6rem;">Items</h3>
+          <div class="admin-list" id="g-list"></div>
+        </div>
+      </section>
+
+      <!-- EVENTS TAB -->
+      <section data-panel="events" class="hidden">
+        <h1>Events</h1>
+        <p class="hint">Manage upcoming and past events.</p>
+        <div class="admin-card">
+          <h3 style="margin-bottom: 1rem;">Add event</h3>
+          <div class="admin-row">
+            <div class="field"><label>Status</label><select id="e-status"><option value="upcoming">Upcoming</option><option value="past">Past</option></select></div>
+            <div class="field"><label>Date</label><input id="e-date" type="date"></div>
+            <div class="field"><label>Title</label><input id="e-title"></div>
+            <div class="field"><label>Location</label><input id="e-location"></div>
+            <div class="field full" style="grid-column: 1 / -1;"><label>Summary</label><textarea id="e-summary"></textarea></div>
+            <div class="field"><label>Image path</label><input id="e-image"></div>
+            <div class="field"><label>CTA link (upcoming only)</label><input id="e-link"></div>
+          </div>
+          <div class="admin-actions">
+            <button class="btn primary" id="e-add">Add Event</button>
+            <button class="btn ghost" data-export="events">Export JSON</button>
+            <button class="btn ghost" data-reset="events">Reset</button>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3 style="margin-bottom: .6rem;">Upcoming</h3>
+          <div class="admin-list" id="e-upcoming"></div>
+          <h3 style="margin: 1.6rem 0 .6rem;">Past</h3>
+          <div class="admin-list" id="e-past"></div>
+        </div>
+      </section>
+
+      <!-- SPONSORS TAB -->
+      <section data-panel="sponsors" class="hidden">
+        <h1>Sponsors</h1>
+        <div class="admin-card">
+          <h3 style="margin-bottom: 1rem;">Add sponsor</h3>
+          <div class="admin-row">
+            <div class="field"><label>Name</label><input id="s-name"></div>
+            <div class="field"><label>Tier</label>
+              <select id="s-tier"><option>Platinum</option><option>Gold</option><option>Silver</option><option>Bronze</option></select>
+            </div>
+            <div class="field full" style="grid-column: 1 / -1;"><label>Description</label><textarea id="s-desc"></textarea></div>
+            <div class="field"><label>Logo path</label><input id="s-logo"></div>
+            <div class="field"><label>Website</label><input id="s-link"></div>
+          </div>
+          <div class="admin-actions">
+            <button class="btn primary" id="s-add">Add Sponsor</button>
+            <button class="btn ghost" data-export="sponsors">Export JSON</button>
+            <button class="btn ghost" data-reset="sponsors">Reset</button>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3 style="margin-bottom: .6rem;">Sponsors</h3>
+          <div class="admin-list" id="s-list"></div>
+        </div>
+      </section>
+
+      <!-- SOCIAL TAB -->
+      <section data-panel="social" class="hidden">
+        <h1>Social Media Links</h1>
+        <div class="admin-card">
+          <div class="admin-row">
+            <div class="field"><label>Instagram</label><input data-bind="social.instagram"></div>
+            <div class="field"><label>TikTok</label><input data-bind="social.tiktok"></div>
+            <div class="field"><label>Facebook</label><input data-bind="social.facebook"></div>
+            <div class="field"><label>YouTube</label><input data-bind="social.youtube"></div>
+            <div class="field"><label>WhatsApp</label><input data-bind="social.whatsapp"></div>
+            <div class="field"><label>Email</label><input data-bind="social.email"></div>
+            <div class="field"><label>Phone</label><input data-bind="social.phone"></div>
+          </div>
+          <div class="admin-actions">
+            <button class="btn primary" data-save="social">Save</button>
+            <button class="btn ghost" data-export="social">Export JSON</button>
+            <button class="btn ghost" data-reset="social">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER TAB -->
+      <section data-panel="newsletter" class="hidden">
+        <h1>Newsletter</h1>
+        <p class="hint">Configure your newsletter provider endpoint (Mailchimp, Buttondown, ConvertKit, etc.). Subscribers collected so far are stored locally until an endpoint is wired in.</p>
+        <div class="admin-card">
+          <div class="field full"><label>Subscribe endpoint URL</label><input data-bind="social.newsletterEndpoint" placeholder="https://example.com/subscribe"></div>
+          <div class="admin-actions">
+            <button class="btn primary" data-save="social">Save</button>
+            <button class="btn ghost" id="export-subs">Export Subscribers (CSV)</button>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3 style="margin-bottom: .6rem;">Subscribers</h3>
+          <div class="admin-list" id="subs-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

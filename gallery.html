@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery — VW Lifestyle Club</title>
+  <meta name="description" content="Photos and videos from the VW Lifestyle Club community — events, builds, road trips and lifestyle moments.">
+  <meta property="og:title" content="Gallery — VW Lifestyle Club">
+  <meta property="og:image" content="logo.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gallery">
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="VW Lifestyle Club"></a>
+    <button class="menu-toggle" aria-label="Menu"><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="social.html">Social</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-top: 8rem;">
+      <div class="container">
+        <div class="section-head">
+          <div class="copy">
+            <span class="eyebrow">The Magazine</span>
+            <h1>Gallery</h1>
+            <p class="lead">Photography and short films from across the community. Pick a category — or scroll the whole feed.</p>
+          </div>
+        </div>
+
+        <div class="filters" id="gallery-filters"></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer">
+    <button class="close" aria-label="Close">×</button>
+    <button class="nav-btn prev" aria-label="Previous">‹</button>
+    <button class="nav-btn next" aria-label="Next">›</button>
+    <div class="lb-media"></div>
+    <div class="caption"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="top">
+        <div class="brand-col">
+          <img src="logo.svg" alt="VW Lifestyle Club">
+          <p>More Than Cars. It's A Lifestyle.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="events.html">Events</a></li><li><a href="sponsors.html">Sponsors</a></li></ul></div>
+        <div><h4>Social</h4><ul id="footer-social"></ul></div>
+        <div><h4>Contact</h4><ul id="footer-contact"></ul></div>
+      </div>
+      <div class="bottom">
+        <span>© <span id="year"></span> VW Lifestyle Club</span>
+        <span class="slogan">More Than Cars. It's A Lifestyle.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/app.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

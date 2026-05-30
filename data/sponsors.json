@@ -1,0 +1,60 @@
+{
+  "headline": "Driven With Our Partners",
+  "intro": "We work with brands that share our standard — craft, culture and community.",
+  "sponsors": [
+    {
+      "id": "sp-1",
+      "name": "Apex Motorsport",
+      "logo": "images/sponsors/apex.svg",
+      "tier": "Platinum",
+      "description": "Performance parts and tuning for the modern VW.",
+      "link": "#"
+    },
+    {
+      "id": "sp-2",
+      "name": "Stance Lab",
+      "logo": "images/sponsors/stancelab.svg",
+      "tier": "Gold",
+      "description": "Air suspension specialists. Built locally.",
+      "link": "#"
+    },
+    {
+      "id": "sp-3",
+      "name": "Detail Studio JHB",
+      "logo": "images/sponsors/detailstudio.svg",
+      "tier": "Gold",
+      "description": "Concours-level detailing and paint protection.",
+      "link": "#"
+    },
+    {
+      "id": "sp-4",
+      "name": "Forge Wheels SA",
+      "logo": "images/sponsors/forge.svg",
+      "tier": "Silver",
+      "description": "Forged and flow-formed wheels for the streets.",
+      "link": "#"
+    },
+    {
+      "id": "sp-5",
+      "name": "Octane Coffee",
+      "logo": "images/sponsors/octane.svg",
+      "tier": "Silver",
+      "description": "Fueling Saturday morning meets since 2019.",
+      "link": "#"
+    },
+    {
+      "id": "sp-6",
+      "name": "Lensman Studios",
+      "logo": "images/sponsors/lensman.svg",
+      "tier": "Bronze",
+      "description": "Automotive photography and film.",
+      "link": "#"
+    }
+  ],
+  "partnership": {
+    "title": "Partner With Us",
+    "body": "Reach a passionate audience of South African automotive lifestyle enthusiasts. Get in touch to discuss bespoke partnerships.",
+    "ctaLabel": "Become A Partner",
+    "ctaLink": "contact.html"
+  }
+}

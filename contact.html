@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — VW Lifestyle Club</title>
+  <meta name="description" content="Get in touch with VW Lifestyle Club — for membership, events, partnerships or press.">
+  <meta property="og:title" content="Contact — VW Lifestyle Club">
+  <meta property="og:image" content="logo.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="VW Lifestyle Club"></a>
+    <button class="menu-toggle" aria-label="Menu"><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="social.html">Social</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-top: 8rem;">
+      <div class="container">
+        <div class="section-head">
+          <div class="copy">
+            <span class="eyebrow">Get In Touch</span>
+            <h1>Contact</h1>
+            <p class="lead">For membership, events, partnerships or press — we'd love to hear from you.</p>
+          </div>
+        </div>
+
+        <div class="featured-story" style="align-items: start;">
+          <form id="contact-form" class="reveal" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+              </div>
+              <div class="field full">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option>General enquiry</option>
+                  <option>Membership</option>
+                  <option>Event</option>
+                  <option>Partnership / Sponsorship</option>
+                  <option>Press</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <div class="field full">
+                <button class="btn primary" type="submit">Send Message <span class="arrow">→</span></button>
+                <div id="contact-status" style="margin-top: 1rem; color: var(--blue-soft); min-height: 1.2em;" aria-live="polite"></div>
+              </div>
+            </div>
+          </form>
+
+          <div class="reveal delay-1" style="border: 1px solid var(--line); padding: 2rem;">
+            <span class="eyebrow">Direct</span>
+            <h3 style="margin-top: .6rem;">Reach us directly.</h3>
+            <ul id="footer-contact" style="list-style: none; padding: 0; margin: 1.4rem 0 0; display: flex; flex-direction: column; gap: .6rem;"></ul>
+            <div class="divider" style="margin: 1.6rem 0;"></div>
+            <span class="eyebrow">Social</span>
+            <ul id="footer-social" style="list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-direction: column; gap: .6rem;"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="bottom" style="padding-top: 0;">
+        <span>© <span id="year"></span> VW Lifestyle Club</span>
+        <span class="slogan">More Than Cars. It's A Lifestyle.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/app.js"></script>
+</body>
+</html>

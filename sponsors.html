@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sponsors — VW Lifestyle Club</title>
+  <meta name="description" content="The partners behind VW Lifestyle Club — brands that share our standard for craft, culture and community.">
+  <meta property="og:title" content="Sponsors — VW Lifestyle Club">
+  <meta property="og:image" content="logo.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="sponsors">
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="VW Lifestyle Club"></a>
+    <button class="menu-toggle" aria-label="Menu"><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="social.html">Social</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-top: 8rem;" id="sponsors-head">
+      <div class="container">
+        <div class="section-head">
+          <div class="copy">
+            <span class="eyebrow">Partners</span>
+            <h1>Driven With Our Partners</h1>
+            <p class="lead">We work with brands that share our standard — craft, culture and community.</p>
+          </div>
+        </div>
+
+        <div class="sponsors-grid" id="sponsors-grid"></div>
+      </div>
+    </section>
+
+    <section id="sponsors-cta" style="background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <div class="newsletter" style="background: transparent; padding: 0; border: 0;">
+          <div class="inner">
+            <div>
+              <span class="eyebrow">Spotlight</span>
+              <h2>Partner With Us</h2>
+              <p class="lead">Reach a passionate audience of South African automotive lifestyle enthusiasts. Get in touch to discuss bespoke partnerships.</p>
+            </div>
+            <div>
+              <a class="btn primary" href="contact.html">Become A Partner <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="top">
+        <div class="brand-col">
+          <img src="logo.svg" alt="VW Lifestyle Club">
+          <p>More Than Cars. It's A Lifestyle.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="events.html">Events</a></li><li><a href="sponsors.html">Sponsors</a></li></ul></div>
+        <div><h4>Social</h4><ul id="footer-social"></ul></div>
+        <div><h4>Contact</h4><ul id="footer-contact"></ul></div>
+      </div>
+      <div class="bottom">
+        <span>© <span id="year"></span> VW Lifestyle Club</span>
+        <span class="slogan">More Than Cars. It's A Lifestyle.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "categories": ["All", "Events", "Builds", "Lifestyle", "Road Trips", "Community"],
+  "items": [
+    { "id": 1, "type": "image", "category": "Events", "src": "images/gallery/1.jpg", "title": "Joburg Meet", "caption": "Sunset linkup at the rooftop." },
+    { "id": 2, "type": "image", "category": "Builds", "src": "images/gallery/2.jpg", "title": "MK7 Static", "caption": "Air over rims, low and quiet." },
+    { "id": 3, "type": "image", "category": "Lifestyle", "src": "images/gallery/3.jpg", "title": "Coffee & Cars", "caption": "Saturday slow mornings." },
+    { "id": 4, "type": "image", "category": "Road Trips", "src": "images/gallery/4.jpg", "title": "Garden Route Run", "caption": "Coastline convoy." },
+    { "id": 5, "type": "video", "category": "Events", "src": "videos/clip-1.mp4", "poster": "images/gallery/5.jpg", "title": "Track Day", "caption": "Highlight reel." },
+    { "id": 6, "type": "image", "category": "Community", "src": "images/gallery/6.jpg", "title": "Family", "caption": "More than cars." },
+    { "id": 7, "type": "image", "category": "Builds", "src": "images/gallery/7.jpg", "title": "Golf R Spec", "caption": "Restrained aggression." },
+    { "id": 8, "type": "image", "category": "Lifestyle", "src": "images/gallery/8.jpg", "title": "City Lights", "caption": "Night runs." },
+    { "id": 9, "type": "image", "category": "Road Trips", "src": "images/gallery/9.jpg", "title": "Drakensberg", "caption": "Mountain pass." },
+    { "id": 10, "type": "image", "category": "Events", "src": "images/gallery/10.jpg", "title": "Show & Shine", "caption": "Detail obsession." },
+    { "id": 11, "type": "image", "category": "Community", "src": "images/gallery/11.jpg", "title": "Crew", "caption": "Family first." },
+    { "id": 12, "type": "image", "category": "Builds", "src": "images/gallery/12.jpg", "title": "GTI Heritage", "caption": "A nod to the originals." }
+  ]
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Events — VW Lifestyle Club</title>
+  <meta name="description" content="Upcoming and past VW Lifestyle Club events — linkups, convoys, track days and shows across South Africa.">
+  <meta property="og:title" content="Events — VW Lifestyle Club">
+  <meta property="og:image" content="logo.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="VW Lifestyle Club"></a>
+    <button class="menu-toggle" aria-label="Menu"><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="social.html">Social</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding-top: 8rem;">
+      <div class="container">
+        <div class="section-head">
+          <div class="copy">
+            <span class="eyebrow">Calendar</span>
+            <h1>Events</h1>
+            <p class="lead">Upcoming linkups, convoys, track days and shows — and the highlights from past dates.</p>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.3rem; margin-bottom: 1.4rem; color: var(--mute);">Upcoming</h2>
+        <div class="cards" id="events-upcoming"></div>
+      </div>
+    </section>
+
+    <section style="background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="container">
+        <h2 style="font-size: 1.3rem; margin-bottom: 1.4rem; color: var(--mute);">Past Highlights</h2>
+        <div class="cards" id="events-past"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="top">
+        <div class="brand-col">
+          <img src="logo.svg" alt="VW Lifestyle Club">
+          <p>More Than Cars. It's A Lifestyle.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="events.html">Events</a></li><li><a href="sponsors.html">Sponsors</a></li></ul></div>
+        <div><h4>Social</h4><ul id="footer-social"></ul></div>
+        <div><h4>Contact</h4><ul id="footer-contact"></ul></div>
+      </div>
+      <div class="bottom">
+        <span>© <span id="year"></span> VW Lifestyle Club</span>
+        <span class="slogan">More Than Cars. It's A Lifestyle.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/app.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

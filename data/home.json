@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "More Than Cars.",
+    "titleAccent": "It's A Lifestyle.",
+    "subtitle": "A South African Volkswagen community built on culture, craft and the open road.",
+    "ctaLabel": "Join The Movement",
+    "ctaLink": "contact.html",
+    "videoSrc": "videos/hero.mp4",
+    "posterSrc": "images/hero-poster.jpg"
+  },
+  "featuredStory": {
+    "kicker": "The Feature",
+    "title": "Built In Mzansi. Driven Everywhere.",
+    "body": "From Soweto streets to Cape coastlines, our community shares one obsession — the cars we drive, the stories they carry, and the lives we live around them.",
+    "image": "images/featured-story.jpg",
+    "link": "about.html"
+  },
+  "highlights": [
+    { "label": "Members", "value": "1,200+" },
+    { "label": "Cities", "value": "12" },
+    { "label": "Events Hosted", "value": "48" },
+    { "label": "Road Trips", "value": "60+" }
+  ]
+}
